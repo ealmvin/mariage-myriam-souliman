@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { MapPin, Clock, Calendar, Heart, Users, ChevronDown, Home } from "lucide-react";
 import { supabase } from "./supabase";
+import bismillah from "./assets/bismillah.png";
 
 // Polices Google Fonts injectées dynamiquement
 const FONT_IMPORT = `
@@ -218,7 +219,7 @@ export default function App() {
     setLoading(false);
 
     if (error) {
-      setSubmitError("Une erreur est survenue, veuillez réessayer.");
+      setSubmitError(`Erreur : ${error.message}`);
       console.error("Supabase error:", error);
     } else {
       setSubmitted(true);
@@ -233,6 +234,26 @@ export default function App() {
       <style>{FONT_IMPORT}</style>
 
       <div className="font-sans-clean" style={{ minHeight: "100vh", background: "#FAF8F5" }}>
+
+        {/* ═══════════════════ BISMILLAH ═══════════════════ */}
+        <div style={{
+          width: "100%",
+          background: "#FAF8F5",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          padding: "2rem 1.5rem 0.5rem",
+        }}>
+          <img
+            src={bismillah}
+            alt="Bismillah ir-Rahman ir-Rahim"
+            style={{
+              maxWidth: 340,
+              width: "70%",
+              opacity: 0.92,
+            }}
+          />
+        </div>
 
         {/* ═══════════════════ HERO ═══════════════════ */}
         <section
