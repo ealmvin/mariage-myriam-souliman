@@ -97,7 +97,7 @@ function ProgramCard({ time, subtitle, title, address, accentColor, iconColor, I
   return (
     <div
       style={{
-        background: "#fff",
+        background: "#ffffffff",
         borderRadius: "1.25rem",
         padding: "2rem",
         border: "1px solid #e8e0d0",
@@ -233,12 +233,12 @@ export default function App() {
     <>
       <style>{FONT_IMPORT}</style>
 
-      <div className="font-sans-clean" style={{ minHeight: "100vh", background: "#FAF8F5" }}>
+      <div className="font-sans-clean" style={{ minHeight: "100vh", background: "#ffffff" }}>
 
         {/* ═══════════════════ BISMILLAH ═══════════════════ */}
         <div style={{
           width: "100%",
-          background: "#FAF8F5",
+          background: "#ffffff",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -614,7 +614,7 @@ export default function App() {
         </section>
 
         {/* ═══════════════════ FOOTER ═══════════════════ */}
-        <footer style={{ padding: "4rem 1.5rem", background: "#FAF8F5", textAlign: "center" }}>
+        <footer style={{ padding: "4rem 1.5rem", background: "#ffffff", textAlign: "center" }}>
           <Divider />
           <br></br>
 
