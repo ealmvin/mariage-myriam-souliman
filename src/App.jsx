@@ -318,7 +318,7 @@ export default function App() {
             className="font-serif-elegant"
             style={{ fontSize: "clamp(1.1rem, 3vw, 1.4rem)", color: "#4a4a4a", lineHeight: 1.85, fontStyle: "italic" }}
           >
-            Les familles <strong style={{ fontStyle: "italic" }}>Ghoula</strong> et{" "}
+            La famille <strong style={{ fontStyle: "italic" }}>Ghoula</strong> et la famille{" "}
             <strong style={{ fontStyle: "italic" }}>Boulaayoun</strong> ont le plaisir de vous inviter au
             mariage de leurs enfants. 
           </p>
@@ -328,7 +328,7 @@ export default function App() {
             style={{ color: "#8a8a8a", fontSize: "0.95rem", lineHeight: 1.9, marginTop: "1.5rem" }}
           >
             بَارَكَ اللَّهُ لَكُمَا وَبَارَكَ عَلَيْكُمَا وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ
-
+            <br></br>
              Qu’Allah vous bénisse tous les deux, qu’Il répande Sa bénédiction sur vous deux et qu’Il vous unisse dans le bien. 
           </p>
         </section>
@@ -573,7 +573,7 @@ export default function App() {
                   <textarea
                     className="form-input"
                     name="message" value={formData.message} onChange={handleChange}
-                    rows={3} placeholder="Un message, une restriction alimentaire…"
+                    rows={3} placeholder="Un petit mot…"
                     style={{ resize: "none" }}
                   />
                 </div>
@@ -602,13 +602,6 @@ export default function App() {
             style={{ color: "#7a7a7a", fontSize: "1rem", lineHeight: 1.9, maxWidth: 420, margin: "0 auto 0.75rem" }}
           >
             À cette occasion, nous serons heureux de vous compter parmi nous.
-          </p>
-
-          <p
-            className="font-sans-clean"
-            style={{ color: "#a0a0a0", fontSize: "0.95rem", lineHeight: 1.8, maxWidth: 400, margin: "0 auto" }}
-          >
-            📵 Afin de préserver ce moment précieux, merci de ne rien publier sur les réseaux sociaux.
           </p>
 
            <p
