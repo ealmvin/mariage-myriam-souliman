@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { MapPin, Clock, Calendar, Heart, Users, ChevronDown, Home } from "lucide-react";
 import { supabase } from "./supabase";
-import nikkah from "./assets/nikkah.png";
 
 // Polices Google Fonts injectées dynamiquement
 const FONT_IMPORT = `
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Amiri:ital@0;1&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap');
 
   * { box-sizing: border-box; }
 
@@ -235,31 +234,89 @@ export default function App() {
 
       <div className="font-sans-clean" style={{ minHeight: "100vh", background: "#ffffff" }}>
 
-        {/* ═══════════════════ COVER NIKKAH ═══════════════════ */}
+        {/* ═══════════════════ HERO CALLIGRAPHIE ═══════════════════ */}
         <section style={{
-          width: "100%", height: "100vh",
-          background: "#ffffff", position: "relative",
-          overflow: "hidden",
+          minHeight: "100vh", display: "flex", flexDirection: "column",
+          alignItems: "center", justifyContent: "center",
+          background: "#f9f7f4", padding: "2rem 1.5rem",
         }}>
-          <img
-            src={nikkah}
-            alt="Invitation Mariage Myriam & Souliman"
-            style={{
-              width: "100%", height: "100%",
-              objectFit: "cover",
-              objectPosition: "center top",
-              display: "block",
-            }}
-          />
-          <a
-            href="#invitation"
-            className="animate-bounce"
-            aria-label="Défiler vers le bas"
-            style={{
-              position: "absolute", bottom: "1.5rem", left: "50%",
-              transform: "translateX(-50%)", display: "block",
-            }}
-          >
+          {/* Cadre décoratif */}
+          <div style={{
+            position: "relative", maxWidth: 400, width: "100%",
+            padding: "3rem 2.5rem", textAlign: "center",
+            background: "#ffffff",
+            boxShadow: "0 0 0 1px #C9A84C, 0 0 0 9px #f9f7f4, 0 0 0 11px #C9A84C55",
+            borderRadius: "3px",
+          }}>
+            {/* Coins dorés */}
+            {["topLeft","topRight","bottomLeft","bottomRight"].map((pos) => (
+              <span key={pos} style={{
+                position: "absolute",
+                top:    pos.startsWith("top")    ? 10 : "auto",
+                bottom: pos.startsWith("bottom") ? 10 : "auto",
+                left:   pos.endsWith("Left")     ? 14 : "auto",
+                right:  pos.endsWith("Right")    ? 14 : "auto",
+                color: "#C9A84C", fontSize: "1rem", lineHeight: 1,
+              }}>✦</span>
+            ))}
+
+            {/* Bismillah */}
+            <p style={{
+              fontFamily: "'Amiri', serif", fontSize: "clamp(1.3rem, 5vw, 1.7rem)",
+              direction: "rtl", color: "#2C2C2C",
+              marginBottom: "1.5rem", lineHeight: 1.8, letterSpacing: "0.03em",
+            }}>
+              بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
+            </p>
+
+            {/* Séparateur */}
+            <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1.75rem" }}>
+              <div style={{ flex: 1, height: 1, background: "#C9A84C55" }} />
+              <span style={{ color: "#C9A84C", fontSize: "0.6rem" }}>✦</span>
+              <div style={{ flex: 1, height: 1, background: "#C9A84C55" }} />
+            </div>
+
+            {/* Prénom 1 */}
+            <h1 style={{
+              fontFamily: "'Great Vibes', cursive",
+              fontSize: "clamp(3.5rem, 14vw, 5.5rem)",
+              color: "#2C2C2C", margin: 0, lineHeight: 1.05, fontWeight: 400,
+            }}>Myriam</h1>
+
+            {/* & */}
+            <p style={{
+              fontFamily: "'Great Vibes', cursive",
+              fontSize: "clamp(2rem, 8vw, 3rem)",
+              color: "#C9A84C", margin: "0.1rem 0", lineHeight: 1,
+            }}>&amp;</p>
+
+            {/* Prénom 2 */}
+            <h1 style={{
+              fontFamily: "'Great Vibes', cursive",
+              fontSize: "clamp(3.5rem, 14vw, 5.5rem)",
+              color: "#2C2C2C", margin: 0, lineHeight: 1.05, fontWeight: 400,
+            }}>Souliman</h1>
+
+            {/* Séparateur */}
+            <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", margin: "1.75rem 0 1.25rem" }}>
+              <div style={{ flex: 1, height: 1, background: "#C9A84C55" }} />
+              <span style={{ color: "#C9A84C", fontSize: "0.6rem" }}>✦</span>
+              <div style={{ flex: 1, height: 1, background: "#C9A84C55" }} />
+            </div>
+
+            {/* Date */}
+            <p style={{
+              fontFamily: "'Playfair Display', serif",
+              fontSize: "clamp(0.85rem, 3vw, 1rem)",
+              letterSpacing: "0.2em", color: "#6b6b6b",
+              textTransform: "uppercase", margin: 0,
+            }}>11 Juillet 2026</p>
+          </div>
+
+          {/* Flèche scroll */}
+          <a href="#invitation" className="animate-bounce"
+            style={{ marginTop: "2rem", display: "block" }}
+            aria-label="Défiler vers le bas">
             <ChevronDown size={28} style={{ color: "#C9A84C" }} />
           </a>
         </section>
@@ -393,7 +450,7 @@ export default function App() {
               </h2>
               <p className="font-sans-clean" style={{ color: "#8a8a8a", fontSize: "0.85rem" }}>
                 Merci de répondre avant le{" "}
-                <strong style={{ color: "#C9A84C" }}>31 Juin 2026</strong>
+                <strong style={{ color: "#C9A84C" }}>1er Juillet 2026</strong>
               </p>
             </div>
 
