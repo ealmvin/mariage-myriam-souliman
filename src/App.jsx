@@ -237,20 +237,28 @@ export default function App() {
 
         {/* ═══════════════════ COVER NIKKAH ═══════════════════ */}
         <section style={{
-          width: "100%", background: "#ffffff",
-          display: "flex", flexDirection: "column",
-          alignItems: "center", justifyContent: "center",
+          width: "100%", height: "100vh",
+          background: "#ffffff", position: "relative",
+          overflow: "hidden",
         }}>
           <img
             src={nikkah}
             alt="Invitation Mariage Myriam & Souliman"
-            style={{ width: "100%", maxWidth: 520, display: "block" }}
+            style={{
+              width: "100%", height: "100%",
+              objectFit: "cover",
+              objectPosition: "center top",
+              display: "block",
+            }}
           />
           <a
             href="#invitation"
             className="animate-bounce"
-            style={{ margin: "0.75rem 0 1.5rem", display: "block" }}
             aria-label="Défiler vers le bas"
+            style={{
+              position: "absolute", bottom: "1.5rem", left: "50%",
+              transform: "translateX(-50%)", display: "block",
+            }}
           >
             <ChevronDown size={28} style={{ color: "#C9A84C" }} />
           </a>
