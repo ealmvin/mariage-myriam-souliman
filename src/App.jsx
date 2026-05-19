@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { MapPin, Clock, Calendar, Heart, Users, ChevronDown, Home } from "lucide-react";
 import { supabase } from "./supabase";
-import bismillah from "./assets/bismillah.png";
+import nikkah from "./assets/nikkah.png";
 
 // Polices Google Fonts injectées dynamiquement
 const FONT_IMPORT = `
@@ -235,92 +235,21 @@ export default function App() {
 
       <div className="font-sans-clean" style={{ minHeight: "100vh", background: "#ffffff" }}>
 
-        {/* ═══════════════════ BISMILLAH ═══════════════════ */}
-        <div style={{
-          width: "100%",
-          background: "#ffffff",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          padding: "2rem 1.5rem 0.5rem",
+        {/* ═══════════════════ COVER NIKKAH ═══════════════════ */}
+        <section style={{
+          width: "100%", background: "#ffffff",
+          display: "flex", flexDirection: "column",
+          alignItems: "center", justifyContent: "center",
         }}>
           <img
-            src={bismillah}
-            alt="Bismillah ir-Rahman ir-Rahim"
-            style={{
-              maxWidth: 340,
-              width: "70%",
-              opacity: 0.92,
-            }}
+            src={nikkah}
+            alt="Invitation Mariage Myriam & Souliman"
+            style={{ width: "100%", maxWidth: 520, display: "block" }}
           />
-        </div>
-
-        {/* ═══════════════════ HERO ═══════════════════ */}
-        <section
-          style={{
-            minHeight: "100vh", display: "flex", flexDirection: "column",
-            alignItems: "center", justifyContent: "center",
-            padding: "5rem 1.5rem", position: "relative", overflow: "hidden",
-          }}
-        >
-          {/* Halos décoratifs */}
-          <div style={{
-            position: "absolute", top: -80, left: -80, width: 340, height: 340,
-            borderRadius: "50%", background: "radial-gradient(circle, #A8C5A022 0%, transparent 70%)",
-            pointerEvents: "none",
-          }} />
-          <div style={{
-            position: "absolute", bottom: -100, right: -80, width: 480, height: 480,
-            borderRadius: "50%", background: "radial-gradient(circle, #C9A84C11 0%, transparent 70%)",
-            pointerEvents: "none",
-          }} />
-
-          <Divider />
-          <div style={{ marginBottom: "1.75rem" }} />
-
-       
-
-
-          <h1
-            className="font-serif-elegant"
-            style={{
-              fontSize: "clamp(3rem, 10vw, 7rem)", color: "#2C2C2C",
-              textAlign: "center", lineHeight: 1.1, marginBottom: "0.25rem",
-            }}
-          >
-            Myriam
-          </h1>
-          <p
-            className="font-serif-elegant"
-            style={{ fontSize: "clamp(1.5rem, 4vw, 2.5rem)", color: "#C9A84C", fontStyle: "italic", margin: "0.5rem 0" }}
-          >
-            &amp;
-          </p>
-          <h1
-            className="font-serif-elegant"
-            style={{
-              fontSize: "clamp(3rem, 10vw, 7rem)", color: "#2C2C2C",
-              textAlign: "center", lineHeight: 1.1,
-            }}
-          >
-            Souliman
-          </h1>
-
-          <div style={{ marginTop: "2rem", marginBottom: "2rem" }}>
-            <Divider icon="calendar" />
-          </div>
-
-          <p
-            className="font-sans-clean"
-            style={{ letterSpacing: "0.2em", textTransform: "uppercase", color: "#8a8a8a", fontSize: "0.75rem" }}
-          >
-            11 Juillet 2026
-          </p>
-
           <a
             href="#invitation"
             className="animate-bounce"
-            style={{ position: "absolute", bottom: "2.5rem", display: "block" }}
+            style={{ margin: "0.75rem 0 1.5rem", display: "block" }}
             aria-label="Défiler vers le bas"
           >
             <ChevronDown size={28} style={{ color: "#C9A84C" }} />
