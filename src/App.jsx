@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MapPin, Clock, Calendar, Heart, Users, ChevronDown, Home } from "lucide-react";
+import { MapPin, Clock, Calendar, Heart, Users, ChevronDown, Home, Camera } from "lucide-react";
 import { supabase } from "./supabase";
 
 // Polices Google Fonts injectées dynamiquement
@@ -367,15 +367,24 @@ export default function App() {
                 gap: "1.5rem",
               }}
             >
-             {/* <ProgramCard
-                subtitle="Départ"
+              <ProgramCard
+                subtitle="Départ — Domicile de la mariée"
                 title="La Maison"
-                time="15h45"
-                address={"13 Rue de Lugoj<br/>Orléans"}
+                time="14h00"
+                address={"13 Rue de Lugoj<br/>45100 Orléans"}
                 accentColor="#C9A84C"
                 iconColor="#C9A84C"
                 Icon={Home}
-              />*/}
+              />
+              <ProgramCard
+                subtitle="Séance Photo"
+                title="Jardin des Plantes"
+                time=""
+                address={"Orléans"}
+                accentColor="#A8C5A0"
+                iconColor="#7aaa7a"
+                Icon={Camera}
+              />
               <ProgramCard
                 subtitle="Cérémonie Civile"
                 title="La Mairie"
