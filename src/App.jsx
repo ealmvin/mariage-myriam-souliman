@@ -370,7 +370,7 @@ export default function App() {
               <ProgramCard
                 subtitle="Départ — Domicile de la mariée"
                 title="La Maison"
-                time="14h00"
+                time="13h00"
                 address={"13 Rue de Lugoj<br/>45100 Orléans"}
                 accentColor="#C9A84C"
                 iconColor="#C9A84C"
@@ -378,7 +378,7 @@ export default function App() {
               />
               <ProgramCard
                 subtitle="Séance Photo"
-                title="Jardin des Plantes"
+                title="Parc Floral"
                 time=""
                 address={"Orléans"}
                 accentColor="#A8C5A0"
